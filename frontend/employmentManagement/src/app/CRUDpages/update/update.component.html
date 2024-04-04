@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Update Employee</h2>
+    <form>
+        <div class="form-group">
+            <label for="_id">ID:</label>
+            <input type="text" class="form-control" id="_id" [(ngModel)]="_id" name="_id">
+        </div>
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" class="form-control" id="first_name" [(ngModel)]="first_name" name="first_name">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" class="form-control" id="last_name" [(ngModel)]="last_name" name="last_name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <input type="text" class="form-control" id="gender" [(ngModel)]="gender" name="gender">
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary:</label>
+            <input type="number" class="form-control" id="salary" [(ngModel)]="salary" name="salary">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="onUpdate()">Update</button>
+    </form>
+</div>
+

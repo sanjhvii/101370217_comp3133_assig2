@@ -1,0 +1,32 @@
+<div class="container">
+    <div>
+        <button (click)="login()">Login</button>
+        <button (click)="signup()">Sign Up</button>
+    </div>
+    <div>
+        <h2>Employee List</h2>
+        <button (click)="add()">Add</button>
+        <div>
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+
+                <tr *ngFor="let employee of employees$ | async">
+                    <td>{{ employee.first_name }}</td>
+                    <td>{{ employee.last_name }}</td>
+                    <td>{{ employee.email }}</td>
+                    <td>
+                        <button (click)="view(employee._id)">View</button>
+                        <button (click)="update(employee._id)">Update</button>
+                        <button (click)="delete(employee._id)">Delete</button>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
